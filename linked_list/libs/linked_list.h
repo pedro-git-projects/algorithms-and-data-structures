@@ -9,5 +9,10 @@ class LinkedList {
 		int length;
 	public:
 		LinkedList(int value);
+		void printList();
+		void append(int newNode);
+		int getHead();
+		int getTail();
+		int getLength();
 };
 #endif

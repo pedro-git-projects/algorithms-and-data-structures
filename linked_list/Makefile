@@ -11,7 +11,7 @@ build:
 	mv $(OBJ_NAME) ./bin
 
 run:
-	./$(OBJ_NAME)
+	./bin/$(OBJ_NAME)
 
 clean:
 	rm ./bin/$(OBJ_NAME)
