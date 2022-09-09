@@ -1,14 +1,8 @@
-class LinkedList {
-	private:
-		Node* head;
-		Node* tail;
-		int length;
+#include "linked_list.h"
 
-	public:
-		LinkedList(int value) {
-			Node* newNode = new Node(value);
-			head = newNode;
-			tail = newNode;
-			length = 1;
-		}
-};
+LinkedList::LinkedList(int value) {
+	Node* newNode = new Node(value);
+	head = newNode;
+	tail = newNode;
+	length = 1;
+}
