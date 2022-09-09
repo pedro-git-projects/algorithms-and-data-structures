@@ -11,7 +11,7 @@ LinkedList::LinkedList(int value) {
 
 void LinkedList::printList() {
 	Node* temp = head;
-	while (temp) { // equivalent to temp != nullptr
+	while (temp != nullptr) { 
 		std::cout << temp->value << std::endl;
 		temp = temp->next;
 	}
@@ -28,6 +28,27 @@ void LinkedList::append(int value) {
 	}
 	length++;
 }
+
+Node* LinkedList::removeLast() {
+	if(length == 0)	return nullptr;
+	
+	Node* desired = head;
+	Node* temp = head;
+	while(temp->next != nullptr) {
+		desired = temp;
+		temp = temp->next;
+	}
+	tail = desired;
+	tail->next = nullptr;
+	length--;
+	
+	if(length == 0) {
+		head = nullptr;
+		tail = nullptr;
+	}
+	return desired;
+}
+
 
 int LinkedList::getHead() {
 	return head->value;

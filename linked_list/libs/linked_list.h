@@ -11,6 +11,7 @@ class LinkedList {
 		LinkedList(int value);
 		void printList();
 		void append(int newNode);
+		Node* removeLast();
 		int getHead();
 		int getTail();
 		int getLength();
