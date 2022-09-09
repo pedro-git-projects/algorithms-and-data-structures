@@ -1,0 +1,50 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "linked",
+      "./src/linked_list.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/linked_list",
+    "file": "/home/pedro/Dev/algorithms/linked_list/src/linked_list.cpp",
+    "output": "/home/pedro/Dev/algorithms/linked_list/linked"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "linked",
+      "./src/main.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/linked_list",
+    "file": "/home/pedro/Dev/algorithms/linked_list/src/main.cpp",
+    "output": "/home/pedro/Dev/algorithms/linked_list/linked"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "linked",
+      "./src/node.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/linked_list",
+    "file": "/home/pedro/Dev/algorithms/linked_list/src/node.cpp",
+    "output": "/home/pedro/Dev/algorithms/linked_list/linked"
+  }
+]
