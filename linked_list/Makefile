@@ -8,9 +8,10 @@ OBJ_NAME = linked
 
 build:
 	$(CC) $(COMPILER_FLAGS) $(LANG_STD) $(INCLUDE_PATH) $(SRC_FILES) -o $(OBJ_NAME)
+	mv $(OBJ_NAME) ./bin
 
 run:
 	./$(OBJ_NAME)
 
 clean:
-	rm $(OBJ_NAME)
+	rm ./bin/$(OBJ_NAME)
