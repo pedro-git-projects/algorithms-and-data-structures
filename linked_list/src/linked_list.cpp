@@ -29,6 +29,18 @@ void LinkedList::append(int value) {
 	length++;
 }
 
+void LinkedList::prepend(int value) {
+	Node* newNode = new Node(value);
+	if(head != nullptr) {
+		newNode->next = head;
+		head = newNode;
+	} else {
+		head = newNode;
+		tail = newNode;
+	}
+	length++;
+}
+
 Node* LinkedList::removeLast() {
 	if(length == 0)	return nullptr;
 	

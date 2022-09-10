@@ -10,7 +10,8 @@ class LinkedList {
 	public:
 		LinkedList(int value);
 		void printList();
-		void append(int newNode);
+		void append(int value);
+		void prepend(int value);
 		Node* removeLast();
 		int getHead();
 		int getTail();
