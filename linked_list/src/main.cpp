@@ -13,4 +13,8 @@ int main() {
 
 	ll->prepend(1);
 	ll->printList();
+
+	ll->removeFirst();
+	std::cout << SEP << std::endl;
+	ll->printList();
 }

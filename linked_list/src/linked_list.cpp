@@ -43,7 +43,7 @@ void LinkedList::prepend(int value) {
 
 Node* LinkedList::removeLast() {
 	if(length == 0)	return nullptr;
-	
+
 	Node* desired = head;
 	Node* temp = head;
 	while(temp->next != nullptr) {
@@ -53,11 +53,24 @@ Node* LinkedList::removeLast() {
 	tail = desired;
 	tail->next = nullptr;
 	length--;
-	
+
 	if(length == 0) {
 		head = nullptr;
 		tail = nullptr;
 	}
+	return desired;
+}
+
+Node* LinkedList::removeFirst() {
+	if(length == 0) return nullptr;
+
+	Node* desired = head;	
+	head = head->next;	
+	desired->next = nullptr; 
+	length--;
+
+	if(length == 0)	tail = nullptr;
+
 	return desired;
 }
 
