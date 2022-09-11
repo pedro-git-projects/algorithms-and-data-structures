@@ -105,6 +105,33 @@ bool DoublyLinkedList::set(int index, int value) {
 	return false;
 }
 
+bool DoublyLinkedList::insert(int index, int value) {
+	Node* desired = DoublyLinkedList::get(index);
+	if(desired == nullptr) return false;
+
+	if(index == 0) {
+		DoublyLinkedList::prepend(value);
+		return true;
+	}
+
+	if(index == length) {
+		DoublyLinkedList::append(value);
+		return true;
+	}
+
+	Node* newNode = new Node{value};
+	Node* before = get(index -1);
+	Node* after = before->next;
+
+	newNode->prev = before;
+	newNode->next = after;
+	before->next = newNode;
+	after->prev = newNode;
+	length++;
+	
+	return true;
+}
+
 Node* DoublyLinkedList::getHead() {
 	return this->head;
 }

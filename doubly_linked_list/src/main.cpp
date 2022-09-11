@@ -24,4 +24,7 @@ int main() {
 	std::cout << dll.get(2)->value << std::endl;
 	dll.set(2, 3);
 	std::cout << dll << std::endl;
+
+	dll.insert(2, 99);
+	std::cout << dll << std::endl;
 }
