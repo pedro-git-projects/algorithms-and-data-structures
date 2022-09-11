@@ -16,6 +16,7 @@ class LinkedList {
 		Node* removeLast();
 		Node* getByIndex(int index);
 		bool set(int index, int value);
+		bool insert(int index, int value);
 		int getHead();
 		int getTail();
 		int getLength();

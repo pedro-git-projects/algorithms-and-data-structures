@@ -23,5 +23,10 @@ int main() {
 
 	ll->set(1, 99);
 	std::cout << ll->getByIndex(1)->value << std::endl;
+
+	ll->printList();
+	std::cout << SEP << std::endl;
+	ll->insert(2, 80);
+	ll->printList();
 	
 }

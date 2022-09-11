@@ -97,6 +97,24 @@ bool LinkedList::set(int index, int value) {
 	} 
 }
 
+bool LinkedList::insert(int index, int value) {
+	Node* desired = getByIndex(index);
+	if(desired == nullptr) return false;
+	if(index == 0) {
+		LinkedList::prepend(value);
+		return true;
+	} else if(index == length) {
+		append(value);
+		return true;
+	}
+	Node* newNode = new Node(value);
+	Node* pre = LinkedList::getByIndex(index -1);
+	newNode->next = pre->next;
+	pre->next = newNode;
+	length++;
+	return true;
+}
+
 int LinkedList::getHead() {
 	return head->value;
 }
