@@ -32,5 +32,9 @@ int main() {
 	std::cout << SEP << std::endl;
 	ll->remove(3);
 	ll->printList();
+	std::cout << SEP << std::endl;
+
+	ll->reverse();
+	ll->printList();
 	
 }

@@ -12,6 +12,7 @@ class LinkedList {
 		void printList();
 		void append(int value);
 		void prepend(int value);
+		void reverse();
 		Node* removeFirst();
 		Node* removeLast();
 		Node* remove(int index);
