@@ -18,4 +18,6 @@ int main() {
 	dll.prepend(-1);
 	std::cout << dll <<  std::endl;
 
+	dll.removeFirst();
+	std::cout << dll <<  std::endl;
 }

@@ -49,6 +49,21 @@ void DoublyLinkedList::prepend(int value) {
 	length++;
 }
 
+Node* DoublyLinkedList::removeFirst() {
+	if(length == 0) return nullptr;
+	Node* desired{ head };
+	if(length == 1) {
+		head = nullptr;	
+		tail = nullptr;
+	} else {
+		 head = head->next;
+		 head->prev = nullptr;
+		 desired->next = nullptr;
+	}
+	length--;
+	return desired;
+}
+
 Node* DoublyLinkedList::removeLast() {
 	if(length == 0) return nullptr;
 	Node* desired{ tail };
