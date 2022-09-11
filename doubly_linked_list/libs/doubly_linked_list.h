@@ -17,6 +17,7 @@ class DoublyLinkedList {
 		void prepend(int value);
 		Node* removeLast();
 		Node* removeFirst();
+		Node* get(int index);
 		friend std::ostream& operator << (std::ostream& os, const DoublyLinkedList& dll);
 };
 #endif

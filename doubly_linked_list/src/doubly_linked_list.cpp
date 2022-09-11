@@ -56,9 +56,9 @@ Node* DoublyLinkedList::removeFirst() {
 		head = nullptr;	
 		tail = nullptr;
 	} else {
-		 head = head->next;
-		 head->prev = nullptr;
-		 desired->next = nullptr;
+		head = head->next;
+		head->prev = nullptr;
+		desired->next = nullptr;
 	}
 	length--;
 	return desired;
@@ -76,6 +76,23 @@ Node* DoublyLinkedList::removeLast() {
 		desired->prev = nullptr;
 	}	
 	length--;
+	return desired;
+}
+
+Node* DoublyLinkedList::get(int index) {
+	if(index < 0 || index >= length)  return nullptr;
+	Node* desired{head};
+	if(length < index/2) {
+		for(int i = 0; i < index; i++) {
+			desired = desired->next;
+		}
+	} 
+	else {
+		desired = tail;
+		for(int i = length - 1; i > index; i--) {
+			desired = desired->prev;
+		}
+	}
 	return desired;
 }
 

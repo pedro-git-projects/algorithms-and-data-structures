@@ -20,4 +20,6 @@ int main() {
 
 	dll.removeFirst();
 	std::cout << dll <<  std::endl;
+
+	std::cout << dll.get(2)->value;
 }
