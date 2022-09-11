@@ -74,6 +74,19 @@ Node* LinkedList::removeFirst() {
 	return desired;
 }
 
+Node* LinkedList::getByIndex(int index) {
+	if(index < 0 || index >= length) {
+		return nullptr;
+	} else {
+		Node* desired = head;
+		for(int i = 0; i != index; i++) {
+			desired = desired->next;
+		}
+		return desired;
+	}
+
+}
+
 
 int LinkedList::getHead() {
 	return head->value;

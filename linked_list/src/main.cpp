@@ -17,4 +17,6 @@ int main() {
 	ll->removeFirst();
 	std::cout << SEP << std::endl;
 	ll->printList();
+	std::cout << SEP << std::endl;
+	std::cout << ll->getByIndex(1)->value << std::endl;
 }
