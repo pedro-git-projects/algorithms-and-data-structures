@@ -36,6 +36,19 @@ void DoublyLinkedList::append(int value) {
 	length++;
 }
 
+void DoublyLinkedList::prepend(int value) {
+	Node* newNode = new Node{value};
+	if(length == 0) {
+		head = newNode;
+		tail = newNode;
+	} else {
+		newNode->next = head;
+		head->prev = newNode;
+		head = newNode;
+	}
+	length++;
+}
+
 Node* DoublyLinkedList::removeLast() {
 	if(length == 0) return nullptr;
 	Node* desired{ tail };

@@ -13,4 +13,9 @@ int main() {
 	dll.removeLast();
 	dll.removeLast();
 	std::cout << dll <<  std::endl;
+
+	dll.prepend(0);
+	dll.prepend(-1);
+	std::cout << dll <<  std::endl;
+
 }
