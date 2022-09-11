@@ -1,0 +1,50 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "stack",
+      "./src/doubly_linked_list.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/stacks",
+    "file": "/home/pedro/Dev/algorithms/stacks/src/doubly_linked_list.cpp",
+    "output": "/home/pedro/Dev/algorithms/stacks/stack"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "stack",
+      "./src/main.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/stacks",
+    "file": "/home/pedro/Dev/algorithms/stacks/src/main.cpp",
+    "output": "/home/pedro/Dev/algorithms/stacks/stack"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "stack",
+      "./src/node.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/stacks",
+    "file": "/home/pedro/Dev/algorithms/stacks/src/node.cpp",
+    "output": "/home/pedro/Dev/algorithms/stacks/stack"
+  }
+]
