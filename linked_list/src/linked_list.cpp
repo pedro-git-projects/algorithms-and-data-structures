@@ -87,6 +87,15 @@ Node* LinkedList::getByIndex(int index) {
 
 }
 
+bool LinkedList::set(int index, int value) {
+	Node* desired = LinkedList::getByIndex(index);
+	if(desired != nullptr) {
+		desired->value = value;
+		return true;
+	} else {
+		return false;
+	} 
+}
 
 int LinkedList::getHead() {
 	return head->value;

@@ -19,4 +19,9 @@ int main() {
 	ll->printList();
 	std::cout << SEP << std::endl;
 	std::cout << ll->getByIndex(1)->value << std::endl;
+	std::cout << SEP << std::endl;
+
+	ll->set(1, 99);
+	std::cout << ll->getByIndex(1)->value << std::endl;
+	
 }
