@@ -3,14 +3,14 @@
 #include "node.h"
 
 LinkedList::LinkedList(int value) {
-	Node* newNode = new Node(value);
+	Node* newNode = new Node{value};
 	head = newNode;
 	tail = newNode;
 	length = 1;
 }
 
 void LinkedList::printList() {
-	Node* temp = head;
+	Node* temp{head};
 	while (temp != nullptr) { 
 		std::cout << temp->value << std::endl;
 		temp = temp->next;
@@ -18,7 +18,7 @@ void LinkedList::printList() {
 }
 
 void LinkedList::append(int value) {
-	Node* newNode = new Node(value);
+	Node* newNode = new Node{value};
 	if(head != nullptr) {
 		tail->next = newNode;
 		tail = newNode;
@@ -30,7 +30,7 @@ void LinkedList::append(int value) {
 }
 
 void LinkedList::prepend(int value) {
-	Node* newNode = new Node(value);
+	Node* newNode = new Node{value};
 	if(head != nullptr) {
 		newNode->next = head;
 		head = newNode;
@@ -60,8 +60,8 @@ void LinkedList::reverse() {
 Node* LinkedList::removeLast() {
 	if(length == 0)	return nullptr;
 
-	Node* desired = head;
-	Node* temp = head;
+	Node* desired{head};
+	Node* temp{head};
 	while(temp->next != nullptr) {
 		desired = temp;
 		temp = temp->next;
@@ -80,7 +80,7 @@ Node* LinkedList::removeLast() {
 Node* LinkedList::removeFirst() {
 	if(length == 0) return nullptr;
 
-	Node* desired = head;	
+	Node* desired{head};	
 	head = head->next;	
 	desired->next = nullptr; 
 	length--;
@@ -94,7 +94,7 @@ Node* LinkedList::getByIndex(int index) {
 	if(index < 0 || index >= length) {
 		return nullptr;
 	} else {
-		Node* desired = head;
+		Node* desired{head};
 		for(int i = 0; i != index; i++) {
 			desired = desired->next;
 		}
@@ -104,13 +104,13 @@ Node* LinkedList::getByIndex(int index) {
 }
 
 Node* LinkedList::remove(int index) {
-	Node* desired = LinkedList::getByIndex(index);
+	Node* desired{LinkedList::getByIndex(index)};
 	if(desired == nullptr) return nullptr;
 	if(index == 0) return LinkedList::removeFirst();
 	if(index == length - 1) return LinkedList::removeLast();
 
-	Node* prev = LinkedList::getByIndex(index -1);
-	Node* temp = prev->next; 
+	Node* prev{LinkedList::getByIndex(index -1)};
+	Node* temp{prev->next}; 
 	prev->next = temp->next;
 	temp->next = nullptr;
 	length--;
@@ -118,7 +118,7 @@ Node* LinkedList::remove(int index) {
 }
 
 bool LinkedList::set(int index, int value) {
-	Node* desired = LinkedList::getByIndex(index);
+	Node* desired{LinkedList::getByIndex(index)};
 	if(desired != nullptr) {
 		desired->value = value;
 		return true;
@@ -128,7 +128,7 @@ bool LinkedList::set(int index, int value) {
 }
 
 bool LinkedList::insert(int index, int value) {
-	Node* desired = getByIndex(index);
+	Node* desired{getByIndex(index)};
 	if(desired == nullptr) return false;
 	if(index == 0) {
 		LinkedList::prepend(value);
@@ -137,8 +137,8 @@ bool LinkedList::insert(int index, int value) {
 		append(value);
 		return true;
 	}
-	Node* newNode = new Node(value);
-	Node* pre = LinkedList::getByIndex(index -1);
+	Node* newNode = new Node{value};
+	Node* pre{ LinkedList::getByIndex(index -1) };
 	newNode->next = pre->next;
 	pre->next = newNode;
 	length++;
