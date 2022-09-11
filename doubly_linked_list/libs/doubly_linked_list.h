@@ -17,6 +17,7 @@ class DoublyLinkedList {
 		void prepend(int value);
 		bool set(int index, int value);
 		bool insert(int index, int value);
+		Node* remove(int index);
 		Node* removeLast();
 		Node* removeFirst();
 		Node* get(int index);

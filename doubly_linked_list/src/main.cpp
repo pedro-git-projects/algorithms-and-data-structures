@@ -27,4 +27,7 @@ int main() {
 
 	dll.insert(2, 99);
 	std::cout << dll << std::endl;
+
+	dll.remove(2);
+	std::cout << dll << std::endl;
 }

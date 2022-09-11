@@ -132,6 +132,23 @@ bool DoublyLinkedList::insert(int index, int value) {
 	return true;
 }
 
+Node* DoublyLinkedList::remove(int index) {
+	Node* desired = DoublyLinkedList::get(index);
+	if(desired == nullptr) return nullptr;
+
+	if(index == 0) return removeFirst();
+	if(index == length - 1) return removeLast(); 
+
+	desired->next->prev = desired->prev; // previous arrow of the next node becomes attaches to the previous of the removed
+	desired->prev->next = desired->next; // next arrow of the previous node attaches to the next of the removed 
+	// breaks the ramaining links
+	desired->next = nullptr;
+	desired->prev = nullptr;
+	length--;
+
+	return desired;
+} 
+
 Node* DoublyLinkedList::getHead() {
 	return this->head;
 }
