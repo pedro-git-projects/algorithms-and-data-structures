@@ -14,6 +14,7 @@ class DoublyLinkedList {
 		Node* getTail();
 		int getLength();
 		void append(int value);
+		Node* removeLast();
 		friend std::ostream& operator << (std::ostream& os, const DoublyLinkedList& dll);
 };
 #endif

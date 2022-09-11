@@ -10,4 +10,7 @@ int main() {
 	dll.append(4);
 	std::cout << dll <<  std::endl;
 
+	dll.removeLast();
+	dll.removeLast();
+	std::cout << dll <<  std::endl;
 }

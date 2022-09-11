@@ -12,7 +12,7 @@ DoublyLinkedList::DoublyLinkedList(int value) {
 }
 
 std::ostream& operator <<(std::ostream&  os, const DoublyLinkedList& dll) {
-	Node* curr = dll.head;
+	Node* curr{ dll.head };
 	std::string acc = "";
 	while (curr != nullptr) {
 		acc += std::to_string(curr->value);
@@ -34,6 +34,21 @@ void DoublyLinkedList::append(int value) {
 		tail = newNode;
 	}
 	length++;
+}
+
+Node* DoublyLinkedList::removeLast() {
+	if(length == 0) return nullptr;
+	Node* desired{ tail };
+	if(length == 1) {
+		head = nullptr;
+		tail = nullptr;
+	} else {
+		tail = desired->prev;
+		tail->next = nullptr;
+		desired->prev = nullptr;
+	}	
+	length--;
+	return desired;
 }
 
 Node* DoublyLinkedList::getHead() {
