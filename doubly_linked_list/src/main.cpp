@@ -21,5 +21,7 @@ int main() {
 	dll.removeFirst();
 	std::cout << dll <<  std::endl;
 
-	std::cout << dll.get(2)->value;
+	std::cout << dll.get(2)->value << std::endl;
+	dll.set(2, 3);
+	std::cout << dll << std::endl;
 }

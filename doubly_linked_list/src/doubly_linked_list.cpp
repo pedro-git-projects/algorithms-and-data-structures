@@ -96,6 +96,15 @@ Node* DoublyLinkedList::get(int index) {
 	return desired;
 }
 
+bool DoublyLinkedList::set(int index, int value) {
+	Node* desired =  DoublyLinkedList::get(index);
+	if(desired) {
+		desired->value = value;	
+		return true;
+	} 		
+	return false;
+}
+
 Node* DoublyLinkedList::getHead() {
 	return this->head;
 }
