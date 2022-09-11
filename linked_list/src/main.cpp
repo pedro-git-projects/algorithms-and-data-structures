@@ -28,5 +28,9 @@ int main() {
 	std::cout << SEP << std::endl;
 	ll->insert(2, 80);
 	ll->printList();
+
+	std::cout << SEP << std::endl;
+	ll->remove(3);
+	ll->printList();
 	
 }

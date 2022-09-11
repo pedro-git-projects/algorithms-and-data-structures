@@ -14,6 +14,7 @@ class LinkedList {
 		void prepend(int value);
 		Node* removeFirst();
 		Node* removeLast();
+		Node* remove(int index);
 		Node* getByIndex(int index);
 		bool set(int index, int value);
 		bool insert(int index, int value);

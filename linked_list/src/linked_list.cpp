@@ -87,6 +87,20 @@ Node* LinkedList::getByIndex(int index) {
 
 }
 
+Node* LinkedList::remove(int index) {
+	Node* desired = LinkedList::getByIndex(index);
+	if(desired == nullptr) return nullptr;
+	if(index == 0) return LinkedList::removeFirst();
+	if(index == length - 1) return LinkedList::removeLast();
+
+	Node* prev = LinkedList::getByIndex(index -1);
+	Node* temp = prev->next; 
+	prev->next = temp->next;
+	temp->next = nullptr;
+	length--;
+	return temp;
+}
+
 bool LinkedList::set(int index, int value) {
 	Node* desired = LinkedList::getByIndex(index);
 	if(desired != nullptr) {
