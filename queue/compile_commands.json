@@ -1,0 +1,50 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "queue",
+      "./src/main.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/queue",
+    "file": "/home/pedro/Dev/algorithms/queue/src/main.cpp",
+    "output": "/home/pedro/Dev/algorithms/queue/queue"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "queue",
+      "./src/node.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/queue",
+    "file": "/home/pedro/Dev/algorithms/queue/src/node.cpp",
+    "output": "/home/pedro/Dev/algorithms/queue/queue"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-Wall",
+      "-Wfatal-errors",
+      "-std=c++17",
+      "-I./libs/",
+      "-o",
+      "queue",
+      "./src/queue.cpp"
+    ],
+    "directory": "/home/pedro/Dev/algorithms/queue",
+    "file": "/home/pedro/Dev/algorithms/queue/src/queue.cpp",
+    "output": "/home/pedro/Dev/algorithms/queue/queue"
+  }
+]
