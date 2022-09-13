@@ -29,6 +29,16 @@ void Stack::push(int value) {
 	height++;
 }
 
+Node* Stack::pop() {
+	if(height == 0) return nullptr;
+
+	Node* desired{top};
+	top = top->next;
+	desired->next = nullptr;
+	height--;
+	return desired; 
+}
+
 int Stack::getHeight() {
 	return this->height;
 }

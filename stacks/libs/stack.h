@@ -11,6 +11,7 @@ class Stack {
 		Stack(int value);
 		friend std::ostream& operator << (std::ostream& os, const Stack& dll);
 		void push(int value);
+		Node* pop();
 		int getHeight();
 		Node* getTop();
 

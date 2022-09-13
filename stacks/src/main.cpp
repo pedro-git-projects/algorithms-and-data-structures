@@ -6,4 +6,6 @@ int main() {
 	std::cout << s << std::endl;
 	s.push(1);
 	std::cout << s << std::endl;
+	s.pop();
+	std::cout << s << std::endl;
 }
