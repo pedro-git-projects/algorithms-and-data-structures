@@ -5,9 +5,9 @@
 #include "node.h"
 
 DoublyLinkedList::DoublyLinkedList(int value) {
-	Node* newNode = new Node{value};
-	head = newNode;
-	tail = newNode;
+	Node newNode{value};
+	head = &newNode;
+	tail = &newNode;
 	length = 1;
 }
 

@@ -1,4 +1,5 @@
 #include "stack.h"
+#include "node.h"
 #include <ostream>
 #include <iostream>
 #include <string>
@@ -21,3 +22,17 @@ std::ostream& operator <<(std::ostream&  os, const Stack& s) {
 	return os;
 }
 
+void Stack::push(int value) {
+	Node* newNode = new Node{value};
+	newNode->next = top;
+	top = newNode;
+	height++;
+}
+
+int Stack::getHeight() {
+	return this->height;
+}
+
+Node* Stack::getTop() {
+	return this->top;
+}

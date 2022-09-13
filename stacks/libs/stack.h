@@ -10,5 +10,9 @@ class Stack {
 	public:
 		Stack(int value);
 		friend std::ostream& operator << (std::ostream& os, const Stack& dll);
+		void push(int value);
+		int getHeight();
+		Node* getTop();
+
 };
 #endif
